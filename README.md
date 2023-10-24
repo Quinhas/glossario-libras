@@ -34,6 +34,28 @@
 
 <!-- LICENSE -->
 
+## 🚀 Instalação e Configuração
+
+```bash
+
+# Para rodar essa aplicação é necessário ter instalado o Docker: https://www.docker.com/
+
+# Clone o repositório e entre na pasta do projeto
+$ git clone git@github.com:Quinhas/glossario-libras-api.git && cd glossario-libras-api
+
+# Instale as dependências
+$ pnpm install
+
+# Crie um arquivo .env a partir do .env.example e atualize as variáveis de ambiente
+
+# Inicie o docker
+$ docker-compose up
+
+# Abra http://localhost:3001 no seu navegador para ver a aplicação rodando!
+```
+
+<!-- LICENSE -->
+
 ## 📝 Licença
 
 Copyright © 2023 [Lucas Santana](https://github.com/Quinhas).<br />
