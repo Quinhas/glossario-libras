@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  glossario-api:
+    container_name: glossario-api
+    command: pnpm dev
+    build: .
+    env_file: ./.env
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '3000:3000'
+    depends_on:
+      - glossario-db
+    volumes:
+      - .:/app/
+      - /app/node_modules
+
+  glossario-db:
+    container_name: postgres
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+
+volumes:
+  node_modules: {}
